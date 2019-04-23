@@ -1,3 +1,4 @@
+echo "Building agent @ $1'
 ssh $1 'wget -P /tmp https://apt.puppetlabs.com/puppet6-release-bionic.deb'
 ssh $1  'sudo dpkg -i /tmp/puppet6-release-bionic.deb'
 ssh $1  'sudo apt-get update'
