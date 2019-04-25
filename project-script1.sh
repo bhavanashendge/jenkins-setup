@@ -8,5 +8,5 @@ echo "Installing puppet-agent"
 ssh $1  'sudo apt-get install puppet-agent'
 echo "Adding host file entry as $2 puppet"
 ssh $1  'echo ''$2 puppet'' | sudo tee -a /etc/hosts'
-echo "Adding dpkg"
+echo "Running puppet agent with --test"
 ssh $1  '/opt/puppetlabs/bin/puppet agent --waitforcert 20 --test &'
