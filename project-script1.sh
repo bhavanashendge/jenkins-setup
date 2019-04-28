@@ -9,4 +9,4 @@ ssh $1  'sudo apt-get install puppet-agent'
 echo "Adding host file entry as $2 puppet"
 ssh $1  'echo ''192.168.1.200 puppet'' | sudo tee -a /etc/hosts'
 echo "Running puppet agent with --test"
-ssh $1  '/opt/puppetlabs/bin/puppet agent --waitforcert 20 --test &'
+ssh $1  '/opt/puppetlabs/bin/puppet agent --test &'
