@@ -1,1 +1,1 @@
-ssh $1  '/opt/puppetlabs/bin/puppet agent -t'
+ssh $1  'sudo /opt/puppetlabs/bin/puppet agent -t'
